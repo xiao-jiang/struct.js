@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript" src="./src/basic.js"></script>
+<script type="text/javascript" src="./src/node.js"></script>
+<script type="text/javascript" src="./src/nodeList.js"></script>
+<script type="text/javascript">
+	var list1 = new NodeList();
+	for (var i = 0; i < 10; i++) {
+		list1.add(i);
+	}
+	var list2 = new NodeList();
+	for(var i = 10; i < 20;i++) {
+		list2.add(i);
+	}
+	for(var i=0;i<20;i++) {
+		list1.remove(i);
+		list2.remove(i);
+	}
+	console.log(list1.find(0));
+	console.log(list2.find(10));
+</script>
+</body>
+</html>
