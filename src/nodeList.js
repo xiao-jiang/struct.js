@@ -2,7 +2,8 @@ var NodeList = Basic.extend({
 	private : {
 		init : function () {
 			//private
-			var head = tail = new Node();
+			var head,tail;
+			head = tail = new Node();
 			this.getHead = function () {
 				return head;
 			};
@@ -43,6 +44,16 @@ var NodeList = Basic.extend({
 				}
 				temp = temp.getNext();
 			}
+		},
+		size : function () {
+			var head = this.getHead();
+			var tail = this.getTail();
+			var length = 0;
+			while(head != tail) {
+				length++;
+				head = head.getNext();
+			}
+			return length;
 		}
 	}
 })
